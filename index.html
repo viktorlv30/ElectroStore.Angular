@@ -4,13 +4,16 @@
     <title>Electro store</title>
     <meta charset="utf-8" />
     <base href="/" />
-
+    <link href="app/lib/Bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="app/lib/Bootstrap/bootstrap-theme.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 
-<div style="width: 100px; height: 30px; background-color: greenyellow; border: 1px">HEADER</div>
-<p></p>
-<div style="width: 100px; height: 30px; background-color: lightskyblue; border: 1px">PROFILE</div>
+<a href="/" type="button" class="btn btn-info">Main</a>
+<a href="/profile" type="button" class="btn btn-success">PROFILE</a>
+<a href="/header" type="button" class="btn btn-warning">Header</a>
 
 
 <div ng-view></div>
@@ -20,6 +23,8 @@
 
 <script src="app/app.module.js"></script>
 <script src="app/app.config.js"></script>
+<script src="app/features/profile/profileCtrl.js"></script>
+<script src="app/features/header/headerCtrl.js"></script>
 
 
 </body>

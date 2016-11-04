@@ -7,8 +7,12 @@
             templateUrl: "app/main.htm"
         })
         .when("/profile", {
-            templateUrl: "app/views/enterIntoDash.htm",
-            controller: "dashboardCtrlVitya"
+            templateUrl: "app/features/profile/profile.htm",
+//            controller: "profileCtrl"
+        })
+        .when("/header", {
+            templateUrl: "app/features/header/header.htm",
+//            controller: "headerCtrl"
         })
         .otherwise({ redirectTo: "/" });
 });
