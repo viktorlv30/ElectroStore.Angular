@@ -1,10 +1,26 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="app">
 <head>
     <title>Electro store</title>
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
+    <base href="/" />
+
 </head>
 <body>
+
+<div style="width: 100px; height: 30px; background-color: greenyellow; border: 1px">HEADER</div>
+<p></p>
+<div style="width: 100px; height: 30px; background-color: lightskyblue; border: 1px">PROFILE</div>
+
+
+<div ng-view></div>
+
+<script src="app/lib/angular.min.js"></script>
+<script src="app/lib/angular-route.min.js"></script>
+
+<script src="app/app.module.js"></script>
+<script src="app/app.config.js"></script>
+
 
 </body>
 </html>
