@@ -1,2 +1,11 @@
-﻿body {
+﻿header {
+    background-color: yellow;
+}
+
+.navbar-brand>img{
+    width:175px;
+    height:55px;
+    border-radius:3px;
+    margin-left:-12px;
+    margin-top:-12px;
 }

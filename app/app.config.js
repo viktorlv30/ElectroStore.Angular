@@ -4,14 +4,14 @@
 
     $routeProvider
         .when("/", {
-            templateUrl: "app/main.htm"
+            templateUrl: "../app/main.htm"
         })
         .when("/profile", {
-            templateUrl: "app/features/profile/profile.htm",
+            templateUrl: "../app/features/profile/profile.htm",
 //            controller: "profileCtrl"
         })
         .when("/header", {
-            templateUrl: "app/features/header/header.htm",
+            templateUrl: "../app/features/header/header.htm",
 //            controller: "headerCtrl"
         })
         .otherwise({ redirectTo: "/" });
