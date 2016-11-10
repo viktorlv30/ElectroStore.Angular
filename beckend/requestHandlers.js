@@ -1,5 +1,6 @@
 ﻿//var Exec = require("child_process").exec;
-var querystring = require("querystring");
+var querystring = require("querystring"),
+    fs = require("fs");
 
 function Start(response, postData) {
     console.log("Request handler 'start' was called.");
@@ -30,5 +31,22 @@ function Upload(response, postData) {
     response.end();
 }
 
+function Show(response, postData) {
+    console.log("Request handler 'show' was called.");
+    fs.readFile("d:\Photos\Rolls-Royce-Wraith-2013-1366x768-051.jpg", "binary", function (error, file) {
+        if (error) {
+            response.writeHead(500, { "Content-Type": "text/plain" });
+            response.write(error + "\n");
+            response.end();
+        } else {
+            response.writeHead(200, { "Content-Type": "image/png" });
+            response.write(file, "binary");
+            response.end();
+        }
+
+    });
+}
+
 exports.start = Start;
 exports.upload = Upload;
+exports.show = Show;

@@ -1,4 +1,4 @@
-﻿var Formidable = require("formidable");
+﻿//var Formidable = require("formidable");
 var Http = require("http");
 var Url = require("url");
 var sys = require("util");
@@ -25,14 +25,14 @@ function Start(route, handle){
 	//Http.createServer(onRequest).listen(8888);
 
     Http.createServer(function (req, res) {
-        if (req.url == "/upload" && req.method.toLowerCase() == "post") {
+        if (req.url === "/upload" && req.method.toLowerCase() === "post") {
             //parse a file upload
-            var form = new Formidable.IncomingForm();
-            form.parse(req, function (err, fields, files) {
-                res.writeHead(200, { "content-type": "text/plain" });
-                res.write("received upload: \n\n");
-                res.end(sys.inspect({ fields: fields, files: files }));
-            });
+            //var form = new Formidable.IncomingForm();
+            //form.parse(req, function (err, fields, files) {
+            //    res.writeHead(200, { "content-type": "text/plain" });
+            //    res.write("received upload: \n\n");
+            //    res.end(sys.inspect({ fields: fields, files: files }));
+            //});
             return;
         };
 
@@ -50,7 +50,5 @@ function Start(route, handle){
 
 	console.log("Server has started");
 }
-
-
 
 exports.start = Start;
